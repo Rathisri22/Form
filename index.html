@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        div{
+            margin-top: 30px;
+            margin-left: 35px;
+            float: left;
+            cursor: pointer;
+            font-size: 30px;
+        }
+    </style>
+    <script>
+        function validate()
+        {
+            var Studentname=document.myform.username.value;
+            var Rollno=document.myform.password.value;
+            if(Studentname.length<=0)
+            {
+                alert("Please enter your name")
+                return false;
+            }
+            else if(Rollno.length<8)
+            {
+                alert("Roll no must be 8 digits")
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+        <div>
+        <form name="myform" onsubmit="return validate()" action="Register.html">
+        <label>Student Name :</label>
+        <input type="text" name="username" value=""><br>
+        <label>Roll No :</label>
+        <input type="password" name="password" value=""><br>
+        <input type="submit" value="Register">
+        </form>
+        </div>
+</body>
+</html>
